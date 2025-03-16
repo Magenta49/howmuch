@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>축의금얼마 - 관계별 맞춤 경조사비 계산기</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- SEO 메타 태그 -->
+    <meta name="description" content="결혼식 축의금, 장례식 부의금 등 관계와 상황에 맞는 적정 경조사비를 계산해드립니다.">
+    <meta name="keywords" content="축의금,부의금,경조사비,결혼식,장례식,돌잔치,축의금 얼마,부의금 얼마">
+    
+    <!-- 소셜 미디어 공유용 Open Graph 태그 -->
+    <meta property="og:title" content="축의금얼마 - 관계별 맞춤 경조사비 계산기">
+    <meta property="og:description" content="결혼식, 장례식, 돌잔치 등 모든 경조사비 고민, 이제 해결!">
+    <meta property="og:url" content="https://축의금얼마.com">
+    <meta property="og:type" content="website">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6576892741996017" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>축의금얼마</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">결혼식 축의금</a></li>
+                    <li><a href="buigeum.html">장례식 부의금</a></li>
+                    <li><a href="other.html">기타 경조사</a></li>
+                    <li><a href="manage.html">경조사비 관리</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+<!-- 광고 단위 -->
+<div class="ad-container">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-6576892741996017"
+         data-ad-slot="여기에 광고슬롯ID 입력"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>적정 축의금, 얼마를 내야 할까요?</h2>
+                <p>관계, 지역, 상황에 맞는 적정 축의금을 알려드립니다</p>
+            </div>
+        </section>
+
+        <section class="calculator">
+            <div class="container">
+                <form id="wedding-calc">
+                    <div class="form-group">
+                        <label for="relationship">신랑/신부와의 관계</label>
+                        <select id="relationship" required>
+                            <option value="">관계를 선택하세요</option>
+                            <option value="family">가족/친척</option>
+                            <option value="close-friend">친한 친구/학교 동기</option>
+                            <option value="friend">일반 친구/지인</option>
+                            <option value="coworker">직장 동료</option>
+                            <option value="boss">직장 상사</option>
+                            <option value="subordinate">직장 부하직원</option>
+                            <option value="parent-friend">부모님 지인</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="region">지역</label>
+                        <select id="region" required>
+                            <option value="">지역을 선택하세요</option>
+                            <option value="seoul">서울</option>
+                            <option value="gyeonggi">경기/인천</option>
+                            <option value="metro">광역시</option>
+                            <option value="province">기타 지방</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="venue">예식장 등급</label>
+                        <select id="venue">
+                            <option value="normal">일반 예식장/웨딩홀</option>
+                            <option value="hotel">호텔</option>
+                            <option value="premier">특급 호텔/프리미엄 예식장</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="attendance">참석 여부</label>
+                        <select id="attendance">
+                            <option value="yes">참석</option>
+                            <option value="no">불참</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="previous">이전에 받은 축의금 (선택사항)</label>
+                        <input type="number" id="previous" placeholder="예: 50000">
+                    </div>
+
+                    <button type="submit" class="btn-calculate">계산하기</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="result hidden" id="result-section">
+            <div class="container">
+                <h3>추천 축의금 금액</h3>
+                <div class="result-card">
+                    <p class="result-amount"><span id="min-amount">5</span>만원 ~ <span id="max-amount">10</span>만원</p>
+                    <p class="result-note">상황에 따라 <span id="recommend-amount">7</span>만원이 적절합니다.</p>
+                </div>
+                <div class="result-details">
+                    <h4>금액 산정 근거</h4>
+                    <p id="result-explanation">신랑/신부와의 관계, 지역, 예식장 등급, 참석 여부를 고려한 금액입니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="tips">
+            <div class="container">
+                <h3>축의금 에티켓</h3>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <h4>축의금 봉투</h4>
+                        <p>흰색 또는 금색 축의금 봉투를 사용하고, 이름은 풀어서 씁니다.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4>지폐 상태</h4>
+                        <p>새 지폐를 준비하거나 깨끗한 지폐를 사용하세요.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4>방명록</h4>
+                        <p>방명록에는 축하 메시지와 함께 연락처를 남겨주세요.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 축의금얼마. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="calculator.js"></script>
+</body>
+</html>

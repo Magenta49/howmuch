@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기타 경조사비 계산기 - 돌잔치, 환갑, 집들이 등 적정 금액 추천</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- SEO 메타 태그 -->
+    <meta name="description" content="결혼식 축의금, 장례식 부의금 등 관계와 상황에 맞는 적정 경조사비를 계산해드립니다.">
+    <meta name="keywords" content="축의금,부의금,경조사비,결혼식,장례식,돌잔치,축의금 얼마,부의금 얼마">
+    
+    <!-- 소셜 미디어 공유용 Open Graph 태그 -->
+    <meta property="og:title" content="축의금얼마 - 관계별 맞춤 경조사비 계산기">
+    <meta property="og:description" content="결혼식, 장례식, 돌잔치 등 모든 경조사비 고민, 이제 해결!">
+    <meta property="og:url" content="https://축의금얼마.com">
+    <meta property="og:type" content="website">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6576892741996017" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>축의금얼마</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">결혼식 축의금</a></li>
+                    <li><a href="buigeum.html">장례식 부의금</a></li>
+                    <li><a href="other.html" class="active">기타 경조사</a></li>
+                    <li><a href="manage.html">경조사비 관리</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<!-- 광고 단위 -->
+<div class="ad-container">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-6576892741996017"
+         data-ad-slot="여기에 광고슬롯ID 입력"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>기타 경조사 축하금, 얼마가 적절할까요?</h2>
+                <p>돌잔치, 환갑, 집들이 등 다양한 경조사의 적정 금액을 알려드립니다</p>
+            </div>
+        </section>
+
+        <section class="calculator">
+            <div class="container">
+                <form id="other-calc">
+                    <div class="form-group">
+                        <label for="event-type">경조사 유형</label>
+                        <select id="event-type" required>
+                            <option value="">경조사 유형을 선택하세요</option>
+                            <option value="dol">돌잔치</option>
+                            <option value="hwangap">환갑/칠순/팔순</option>
+                            <option value="house">집들이/이사</option>
+                            <option value="birth">출산 축하</option>
+                            <option value="sick">병문안</option>
+                            <option value="promotion">승진 축하</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="relationship">상대방과의 관계</label>
+                        <select id="relationship" required>
+                            <option value="">관계를 선택하세요</option>
+                            <option value="family">가족/친척</option>
+                            <option value="close-friend">친한 친구/학교 동기</option>
+                            <option value="friend">일반 친구/지인</option>
+                            <option value="coworker">직장 동료</option>
+                            <option value="boss">직장 상사</option>
+                            <option value="subordinate">직장 부하직원</option>
+                            <option value="neighbor">이웃</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="region">지역</label>
+                        <select id="region" required>
+                            <option value="">지역을 선택하세요</option>
+                            <option value="seoul">서울</option>
+                            <option value="gyeonggi">경기/인천</option>
+                            <option value="metro">광역시</option>
+                            <option value="province">기타 지방</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="venue">행사 규모</label>
+                        <select id="venue">
+                            <option value="small">소규모 (가족/지인 중심)</option>
+                            <option value="medium">중간 규모 (일반적인 행사)</option>
+                            <option value="large">대규모 (격식있는 행사)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="attendance">참석 여부</label>
+                        <select id="attendance">
+                            <option value="yes">참석</option>
+                            <option value="no">불참</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="previous">이전에 받은 금액 (선택사항)</label>
+                        <input type="number" id="previous" placeholder="예: 30000">
+                    </div>
+
+                    <button type="submit" class="btn-calculate">계산하기</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="result hidden" id="result-section">
+            <div class="container">
+                <h3>추천 경조사비 금액</h3>
+                <div class="result-card">
+                    <p class="result-amount"><span id="min-amount">3</span>만원 ~ <span id="max-amount">5</span>만원</p>
+                    <p class="result-note">상황에 따라 <span id="recommend-amount">3</span>만원이 적절합니다.</p>
+                </div>
+                <div class="result-details">
+                    <h4>금액 산정 근거</h4>
+                    <p id="result-explanation">경조사 유형, 관계, 지역, 행사 규모, 참석 여부를 고려한 금액입니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="tips">
+            <div class="container">
+                <h3>경조사 에티켓</h3>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <h4 id="tip-title-1">돌잔치 예절</h4>
+                        <p id="tip-content-1">아이의 건강과 행복을 기원하는 메시지를 함께 전하세요. 축하 선물은 금전보다 아이에게 유용한 물건이 좋습니다.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4 id="tip-title-2">환갑/칠순 예절</h4>
+                        <p id="tip-content-2">어르신의 장수를 축하하는 의미로, 정성이 담긴 카드나 메시지를 함께 전달하면 더욱 감사히 여겨집니다.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4 id="tip-title-3">집들이 예절</h4>
+                        <p id="tip-content-3">방문 시 작은 선물(화분, 휴지 등)을 준비하고, 집 안에서는 예의를 갖추어 행동합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 축의금얼마. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="other-calculator.js"></script>
+</body>
+</html>

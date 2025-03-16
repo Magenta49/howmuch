@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://축의금얼마.com/sitemap.xml
